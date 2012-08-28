@@ -1,0 +1,13 @@
+option py_generic_services = true;
+
+message StatusRequest {
+	optional int32 verbosity = 1;
+}
+
+message StatusResponse {
+	optional int32 jobCount = 1;
+}
+
+service StatusService {
+  rpc Status (StatusRequest) returns (StatusResponse);
+}
